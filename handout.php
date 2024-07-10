@@ -943,6 +943,8 @@ foreach ($result as $row) {
     echo $row['name'] . "<br>";
 }
 
+//--------------------------------------------------------------------------
+// --- نحوه کوئری نوشتن با متغییر ---
 
-
-
+  $correctUser = $db->prepare("SELECT * FROM subscribers WHERE email = :email AND password = :password");
+  $correctUser->execute(['email' => $emailUser, 'password' => $passwordUser]);
