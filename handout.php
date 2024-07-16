@@ -851,6 +851,23 @@ if (isset($_FILES['upload'])) {
 
 ?>
 
+<!-- ---------- a nother exmaple ------------ -->
+<?php
+ if (isset($_POST["send"]) && !empty($_FILES["upload"])){
+     vardump($_FILES) // خروجی این یک آرایه هست که مشخصات اون فایل را میدهد :
+      //  'upload' =>
+      //      array (size = 6)
+      //        'name' => 'profile.png'  (string)
+      //        'full_path' => 'profile.png'   (string)
+      //        'type' => image/png     (string)
+      //        'tmp_name' => 'C:\windows\Temp\phpcb39.tmp'     (string)
+      //        'error' => 0   (int)
+      //        'size' => 4047    (int)
+ }
+ ?>
+ 
+
+
 <!-- فرم فایل  -->
 
 <form action="index.php" method="post" enctype="multipart/form-data">
